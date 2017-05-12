@@ -13,6 +13,10 @@
 		DC4ACFA41EC5AAD600A722EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC4ACFA21EC5AAD600A722EE /* Main.storyboard */; };
 		DC4ACFA61EC5AAD600A722EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC4ACFA51EC5AAD600A722EE /* Assets.xcassets */; };
 		DC4ACFA91EC5AAD600A722EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC4ACFA71EC5AAD600A722EE /* LaunchScreen.storyboard */; };
+		DC4ACFB21EC5AB3A00A722EE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC4ACFB11EC5AB3A00A722EE /* MapKit.framework */; };
+		DC4ACFB51EC5ABC400A722EE /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4ACFB41EC5ABC400A722EE /* Person.m */; };
+		DC4ACFB81EC5B0CD00A722EE /* NSDate+RandomDate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4ACFB71EC5B0CD00A722EE /* NSDate+RandomDate.m */; };
+		DC4ACFBC1EC5B32F00A722EE /* AnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4ACFBB1EC5B32F00A722EE /* AnnotationView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,13 @@
 		DC4ACFA51EC5AAD600A722EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC4ACFA81EC5AAD600A722EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC4ACFAA1EC5AAD600A722EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC4ACFB11EC5AB3A00A722EE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		DC4ACFB31EC5ABC400A722EE /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		DC4ACFB41EC5ABC400A722EE /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		DC4ACFB61EC5B0CD00A722EE /* NSDate+RandomDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+RandomDate.h"; sourceTree = "<group>"; };
+		DC4ACFB71EC5B0CD00A722EE /* NSDate+RandomDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+RandomDate.m"; sourceTree = "<group>"; };
+		DC4ACFBA1EC5B32F00A722EE /* AnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnotationView.h; sourceTree = "<group>"; };
+		DC4ACFBB1EC5B32F00A722EE /* AnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnnotationView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC4ACFB21EC5AB3A00A722EE /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +56,7 @@
 			children = (
 				DC4ACF981EC5AAD600A722EE /* MapKitPractice */,
 				DC4ACF971EC5AAD600A722EE /* Products */,
+				DC4ACFB01EC5AB3A00A722EE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +71,7 @@
 		DC4ACF981EC5AAD600A722EE /* MapKitPractice */ = {
 			isa = PBXGroup;
 			children = (
+				DC4ACFB91EC5B28B00A722EE /* Models */,
 				DC4ACF9C1EC5AAD600A722EE /* AppDelegate.h */,
 				DC4ACF9D1EC5AAD600A722EE /* AppDelegate.m */,
 				DC4ACF9F1EC5AAD600A722EE /* ViewController.h */,
@@ -77,6 +91,27 @@
 				DC4ACF9A1EC5AAD600A722EE /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DC4ACFB01EC5AB3A00A722EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC4ACFB11EC5AB3A00A722EE /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC4ACFB91EC5B28B00A722EE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DC4ACFB61EC5B0CD00A722EE /* NSDate+RandomDate.h */,
+				DC4ACFB71EC5B0CD00A722EE /* NSDate+RandomDate.m */,
+				DC4ACFB31EC5ABC400A722EE /* Person.h */,
+				DC4ACFB41EC5ABC400A722EE /* Person.m */,
+				DC4ACFBA1EC5B32F00A722EE /* AnnotationView.h */,
+				DC4ACFBB1EC5B32F00A722EE /* AnnotationView.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,8 +186,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC4ACFB81EC5B0CD00A722EE /* NSDate+RandomDate.m in Sources */,
+				DC4ACFBC1EC5B32F00A722EE /* AnnotationView.m in Sources */,
 				DC4ACFA11EC5AAD600A722EE /* ViewController.m in Sources */,
 				DC4ACF9E1EC5AAD600A722EE /* AppDelegate.m in Sources */,
+				DC4ACFB51EC5ABC400A722EE /* Person.m in Sources */,
 				DC4ACF9B1EC5AAD600A722EE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
