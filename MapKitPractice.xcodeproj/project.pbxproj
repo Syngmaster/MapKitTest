@@ -13,10 +13,12 @@
 		DC4ACFA41EC5AAD600A722EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC4ACFA21EC5AAD600A722EE /* Main.storyboard */; };
 		DC4ACFA61EC5AAD600A722EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC4ACFA51EC5AAD600A722EE /* Assets.xcassets */; };
 		DC4ACFA91EC5AAD600A722EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC4ACFA71EC5AAD600A722EE /* LaunchScreen.storyboard */; };
-		DC4ACFB21EC5AB3A00A722EE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC4ACFB11EC5AB3A00A722EE /* MapKit.framework */; };
 		DC4ACFB51EC5ABC400A722EE /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4ACFB41EC5ABC400A722EE /* Person.m */; };
 		DC4ACFB81EC5B0CD00A722EE /* NSDate+RandomDate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4ACFB71EC5B0CD00A722EE /* NSDate+RandomDate.m */; };
 		DC4ACFBC1EC5B32F00A722EE /* AnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4ACFBB1EC5B32F00A722EE /* AnnotationView.m */; };
+		DC4ACFC81EC7569E00A722EE /* DescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4ACFC71EC7569E00A722EE /* DescriptionViewController.m */; };
+		DC4ACFCB1EC75E9900A722EE /* UIView+AnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4ACFCA1EC75E9900A722EE /* UIView+AnnotationView.m */; };
+		DC4ACFCF1EC77BC600A722EE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC4ACFB11EC5AB3A00A722EE /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,14 +39,19 @@
 		DC4ACFB71EC5B0CD00A722EE /* NSDate+RandomDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+RandomDate.m"; sourceTree = "<group>"; };
 		DC4ACFBA1EC5B32F00A722EE /* AnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnotationView.h; sourceTree = "<group>"; };
 		DC4ACFBB1EC5B32F00A722EE /* AnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnnotationView.m; sourceTree = "<group>"; };
+		DC4ACFC61EC7569E00A722EE /* DescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescriptionViewController.h; sourceTree = "<group>"; };
+		DC4ACFC71EC7569E00A722EE /* DescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescriptionViewController.m; sourceTree = "<group>"; };
+		DC4ACFC91EC75E9900A722EE /* UIView+AnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AnnotationView.h"; sourceTree = "<group>"; };
+		DC4ACFCA1EC75E9900A722EE /* UIView+AnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AnnotationView.m"; sourceTree = "<group>"; };
+		DC4ACFCC1EC76C9300A722EE /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DC4ACF931EC5AAD600A722EE /* Frameworks */ = {
+		DC4ACFCE1EC77BC000A722EE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC4ACFB21EC5AB3A00A722EE /* MapKit.framework in Frameworks */,
+				DC4ACFCF1EC77BC600A722EE /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +81,8 @@
 				DC4ACFB91EC5B28B00A722EE /* Models */,
 				DC4ACF9C1EC5AAD600A722EE /* AppDelegate.h */,
 				DC4ACF9D1EC5AAD600A722EE /* AppDelegate.m */,
+				DC4ACFC61EC7569E00A722EE /* DescriptionViewController.h */,
+				DC4ACFC71EC7569E00A722EE /* DescriptionViewController.m */,
 				DC4ACF9F1EC5AAD600A722EE /* ViewController.h */,
 				DC4ACFA01EC5AAD600A722EE /* ViewController.m */,
 				DC4ACFA21EC5AAD600A722EE /* Main.storyboard */,
@@ -96,6 +105,7 @@
 		DC4ACFB01EC5AB3A00A722EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DC4ACFCC1EC76C9300A722EE /* AddressBook.framework */,
 				DC4ACFB11EC5AB3A00A722EE /* MapKit.framework */,
 			);
 			name = Frameworks;
@@ -110,6 +120,8 @@
 				DC4ACFB41EC5ABC400A722EE /* Person.m */,
 				DC4ACFBA1EC5B32F00A722EE /* AnnotationView.h */,
 				DC4ACFBB1EC5B32F00A722EE /* AnnotationView.m */,
+				DC4ACFC91EC75E9900A722EE /* UIView+AnnotationView.h */,
+				DC4ACFCA1EC75E9900A722EE /* UIView+AnnotationView.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -122,8 +134,8 @@
 			buildConfigurationList = DC4ACFAD1EC5AAD600A722EE /* Build configuration list for PBXNativeTarget "MapKitPractice" */;
 			buildPhases = (
 				DC4ACF921EC5AAD600A722EE /* Sources */,
-				DC4ACF931EC5AAD600A722EE /* Frameworks */,
 				DC4ACF941EC5AAD600A722EE /* Resources */,
+				DC4ACFCE1EC77BC000A722EE /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -190,6 +202,8 @@
 				DC4ACFBC1EC5B32F00A722EE /* AnnotationView.m in Sources */,
 				DC4ACFA11EC5AAD600A722EE /* ViewController.m in Sources */,
 				DC4ACF9E1EC5AAD600A722EE /* AppDelegate.m in Sources */,
+				DC4ACFCB1EC75E9900A722EE /* UIView+AnnotationView.m in Sources */,
+				DC4ACFC81EC7569E00A722EE /* DescriptionViewController.m in Sources */,
 				DC4ACFB51EC5ABC400A722EE /* Person.m in Sources */,
 				DC4ACF9B1EC5AAD600A722EE /* main.m in Sources */,
 			);
