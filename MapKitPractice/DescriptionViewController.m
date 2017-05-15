@@ -22,16 +22,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds)) style:UITableViewStylePlain];
+    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds)) style:UITableViewStyleGrouped];
     tableView.delegate = self;
     tableView.dataSource = self;
+    [tableView setContentInset:UIEdgeInsetsMake(-20,0,0,0)];
     [self.view addSubview:tableView];
     self.tableView = tableView;
+    self.tableView.layoutMargins = UIEdgeInsetsZero;
     
     self.geoCoder = [[CLGeocoder alloc] init];
     
     UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(cancelAction:)];
     
+    self.navigationItem.title = self.person.title;
     self.navigationItem.rightBarButtonItem = cancelButton;
     [self getAddressFromCoordinates:self.person.coordinate];
     
@@ -113,7 +116,7 @@
     
     if (!cell) {
         
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier];
     }
     
         switch (indexPath.row) {
@@ -126,6 +129,8 @@
             case 3: cell.textLabel.text = [NSString stringWithFormat:@"Gender: %@", self.person.gender ? @"Male" : @"Female"];
                 break;
             case 4: cell.textLabel.text = [NSString stringWithFormat:@"Address: %@", self.address];
+                    cell.textLabel.adjustsFontSizeToFitWidth = YES;
+                    cell.textLabel.minimumScaleFactor = 0.5;
                 break;
                 
         }

@@ -18,7 +18,6 @@
 @interface ViewController () <MKMapViewDelegate, UIPopoverPresentationControllerDelegate, PopoverDismissDelegate>
 
 @property (strong, nonatomic) NSMutableArray *arrayOfAnnotations;
-
 @property (strong, nonatomic) UIPopoverPresentationController *popVC;
 
 @end
@@ -35,7 +34,7 @@
                                                   target:self action:@selector(actionAdd:)];
     
     UIBarButtonItem* deleteButton =
-    [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRewind
+    [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash
                                                   target:self action:@selector(actionDelete:)];
     
     UIBarButtonItem* zoomButton =
@@ -129,12 +128,11 @@
 
         pin.canShowCallout = YES;
         pin.draggable = YES;
-        pin.image = (annotation.gender == 0) ? [UIImage imageNamed:@"male.png"] : [UIImage imageNamed:@"female.png"];
+        pin.image = (annotation.gender != 0) ? [UIImage imageNamed:@"male.png"] : [UIImage imageNamed:@"female.png"];
         
         UIButton *descriptionButton = [UIButton buttonWithType:UIButtonTypeInfoDark];
         [descriptionButton addTarget:self action:@selector(descriptionAction:) forControlEvents:UIControlEventTouchUpInside];
         pin.rightCalloutAccessoryView = descriptionButton;
-
         
     } else {
         
@@ -151,14 +149,8 @@
 
 - (void)dismissPopoverController:(DescriptionViewController *)viewController {
     
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-        
-        [self dismissViewControllerAnimated:YES completion:nil];
-    } else {
-        
-        [self dismissViewControllerAnimated:YES completion:nil];
-        self.popVC = nil;
-    }
+    [self dismissViewControllerAnimated:YES completion:nil];
+    self.popVC = nil;
     
 }
 

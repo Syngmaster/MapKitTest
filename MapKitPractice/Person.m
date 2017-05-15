@@ -44,8 +44,8 @@ static int namesCount = 50;
     
     Person *person = [[Person alloc] init];
     
-    person.name = firstNames[arc4random() % 51];
-    person.lastName = lastNames[arc4random() % 51];
+    person.name = firstNames[arc4random() % namesCount];
+    person.lastName = lastNames[arc4random() % namesCount];
     person.gender = arc4random() % 2;
     
     CLLocationCoordinate2D location;
@@ -56,7 +56,7 @@ static int namesCount = 50;
     person.title = [NSString stringWithFormat:@"%@ %@", person.name, person.lastName];
     NSDateFormatter *dateformater = [[NSDateFormatter alloc]init];
     
-    [dateformater setDateFormat:@"yyyy MMM dd"];
+    [dateformater setDateFormat:@"dd MMM yyyy"];
     
     NSDate *date = [[NSDate alloc]init];
     
@@ -64,10 +64,5 @@ static int namesCount = 50;
     
     return person;
 }
-
-
-
-
-
 
 @end
